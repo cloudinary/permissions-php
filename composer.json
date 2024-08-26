@@ -1,0 +1,46 @@
+{
+    "name": "cloudinary/permissions",
+    "version": "1.0.0",
+    "description": "Accounts with Permissions API access can manage custom permission policies. These policies assign permissions for a principal, allowing the principal to perform a specific action on a designated resource within a particular scope (your account or a product environment).   Refer to the [Permissions API guide](permissions_api_guide) for instructions on what to specify in the `policy_statement` to control Cloudinary activities, and to the Cedar schema, which defines the possible values for principals, actions, and resources.  The API uses **Basic Authentication** over HTTPS. Your **Provisioning Key** and **Provisioning Secret** are used for the authentication. These credentials (as well as your ACCOUNT_ID) are located in the [Cloudinary Console](https://console.cloudinary.com/pm) under **Settings > Account > Provisioning API Access**.  The Permissions API has dedicated SDKs for the following languages:  * JavaScript * PHP * Java",
+    "keywords": [
+        "cloudinary",
+        "sdk",
+        "cloud",
+        "image management",
+        "cdn"
+    ],
+    "type": "library",
+    "homepage": "https://support.cloudinary.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Cloudinary",
+            "homepage": "https://support.cloudinary.com"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.4.5",
+        "guzzlehttp/psr7": "^2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.5",
+        "overtrue/phplint": "^9.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": { "Cloudinary\\Permissions\\" : "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Cloudinary\\Permissions\\Test\\" : "tests/" }
+    },
+    "scripts": {
+        "test": [
+            "@phplint"
+        ],
+        "phplint": "phplint"
+    }
+}
